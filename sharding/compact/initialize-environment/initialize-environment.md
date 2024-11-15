@@ -55,7 +55,7 @@ This lab assumes you have:
 
         ```
         <copy>
-        sudo docker ps -a
+        sudo podman ps -a
         </copy>
         ```
         ![sharding docker](images/sharding-docker.png " ")
@@ -64,20 +64,20 @@ This lab assumes you have:
 
         ```
         <copy>
-        sudo docker stop <container ID/NAME>
+        sudo podman stop <container ID/NAME>
         </copy>
         <copy>
-        sudo docker start <container ID/NAME>
+        sudo podman start <container ID/NAME>
         </copy>
         ```
     - For multiple containers, run the following to restart all at once:
 
         ```
         <copy>
-        sudo docker container stop $(docker container list -qa)
+        sudo podman container stop $(docker container list -qa)
         </copy>
         <copy>
-        sudo docker container start $(docker container list -qa)
+        sudo podman container start $(docker container list -qa)
         </copy>
         ```
 

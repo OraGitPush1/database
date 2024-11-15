@@ -39,7 +39,7 @@ This lab assumes you have:
 
     ```
     <copy>
-    sudo docker ps -a
+    sudo podman ps -a
     </copy>
     ```
 
@@ -62,7 +62,7 @@ For more details check [GDSCTL with Oracle Sharding] (https://docs.oracle.com/en
 1. Run in the terminal as **opc** user and connect to the shard directory server.
     ```
     <copy>
-    sudo docker exec -i -t gsm1 /bin/bash
+    sudo podman exec -i -t gsm1 /bin/bash
     </copy>
     ```
 
@@ -137,7 +137,7 @@ For more details see [Oracle Sharding documentation] (https://docs.oracle.com/en
 
     ```
     <copy>
-    sudo docker exec -i -t catalog /bin/bash
+    sudo podman exec -i -t catalog /bin/bash
     </copy>
     ```
 
@@ -186,7 +186,7 @@ For more details see [Oracle Sharding documentation] (https://docs.oracle.com/en
 
     ```
     <copy>
-    sudo docker exec -i -t shard1 /bin/bash
+    sudo podman exec -i -t shard1 /bin/bash
     </copy>
     ```
 
@@ -233,7 +233,7 @@ Run each SQL query by logging in to the shard catalog database as well as one of
 
     ```
     <copy>
-    sudo docker exec -i -t catalog /bin/bash
+    sudo podman exec -i -t catalog /bin/bash
     </copy>
     ```
 
@@ -247,7 +247,7 @@ Run each SQL query by logging in to the shard catalog database as well as one of
 
     ```
     <copy>
-    sudo docker exec -i -t shard3 /bin/bash
+    sudo podman exec -i -t shard3 /bin/bash
     </copy>
     ```
     ```
@@ -316,7 +316,7 @@ Run the below each sql query by login into Catalog database as well as one of th
 
     ```
     <copy>
-    sudo docker exec -i -t shard2 /bin/bash
+    sudo podman exec -i -t shard2 /bin/bash
     </copy>
     ```
     ```
