@@ -5,7 +5,7 @@
     {
       "title": "Introduction",
       "description": "Introduction",
-      "filename": "../../introduction/introduction.md"
+      "filename": "https://github.com/OraGitPush1/database/gds/introduction/introduction.md"
     },
     {
       "title": "Get Started",
@@ -16,7 +16,7 @@
       "title": "Lab 1: Prepare Setup",
       "description": "How to download your ORM stack and update security rules for an existing VCN",
       "publisheddate": "09/28/2020",
-      "filename": "../../prepare-setup/prepare-setup.md"
+      "filename": "https://github.com/OraGitPush1/database/gds/prepare-setup/prepare-setup.md"
     },
     {
       "title": "Lab 2: Environment Setup",
@@ -27,37 +27,37 @@
     {
       "title": "Lab 3: Initialize Environment",
       "description": "Initialize Environment",
-      "filename": "../../initialize-environment/initialize-environment.md"
+      "filename": "https://github.com/OraGitPush1/database/gds/initialize-environment/initialize-environment.md"
     },
     {
       "title": "Lab 4: GDS Install",
       "description": "GDS Install",
-      "filename": "../../gds-install/gds-install.md"
+      "filename": "https://github.com/OraGitPush1/database/gds/gds-install/gds-install.md"
     },
     {
       "title": "Lab 5: Database updates to enable GDS",
       "description": "Database updates to enable GDS",
-      "filename": "../../database-updates-to-enable-GDS/gds-dbs-configuration.md"
+      "filename": "https://github.com/OraGitPush1/database/gds/database-updates-to-enable-GDS/gds-dbs-configuration.md"
     },
     {
       "title": "Lab 6: GDS Configuration",
       "description": "GDS Configuration",
-      "filename": "../../gds-configuration/gds-service-configuration.md"
+      "filename": "https://github.com/OraGitPush1/database/gds/gds-configuration/gds-service-configuration.md"
     },
     {
       "title": "Lab 7: GDS Global Services test with DB Switchover and Failover",
       "description": "GDS Global Services test with DB Switchover and Failover",
-      "filename": "../../gds-switchover-failover/gds-switchover-failover.md"
+      "filename": "https://github.com/OraGitPush1/database/gds/gds-switchover-failover/gds-switchover-failover.md"
     },
     {
       "title": "Lab 8: Clean up Stack and Instances",
       "description": "Clean up ORM Stack and instances",
-      "filename": "../../cleanup/cleanup.md"
+      "filename": "https://github.com/OraGitPush1/database/gds/cleanup/cleanup.md"
     },
     {
       "title": "Troubleshooting: Guide for GDS Test Cases",
       "description": "Troubleshooting Guide for GDS Test Cases",
-      "filename": "../../troubleshootings/troubleshootings.md"
+      "filename": "https://github.com/OraGitPush1/database/gds/troubleshootings/troubleshootings.md"
     },
     {
       "title": "Need Help?",
