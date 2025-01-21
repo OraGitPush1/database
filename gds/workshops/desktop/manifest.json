@@ -1,0 +1,68 @@
+{
+  "workshoptitle": "Use Oracle GDS with Data Guard for Zero Data Loss Apps",
+  "help": "livelabs-help-db_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction",
+      "filename": "https://github.com/OraGitPush1/database/gds/introduction/introduction.md"
+    },
+    {
+      "title": "Get Started",
+      "description": "Login to Oracle Cloud",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+    },
+    {
+      "title": "Lab 1: Prepare Setup",
+      "description": "How to download your ORM stack and update security rules for an existing VCN",
+      "publisheddate": "09/28/2020",
+      "filename": "https://github.com/OraGitPush1/database/gds/prepare-setup/prepare-setup.md"
+    },
+    {
+      "title": "Lab 2: Environment Setup",
+      "description": "How to provision the workshop environment and connect to it",
+      "publisheddate": "06/30/2020",
+      "filename": "https://oracle-livelabs.github.io/common/labs/setup-compute-generic/setup-compute-novnc.md"
+    },
+    {
+      "title": "Lab 3: Initialize Environment",
+      "description": "Initialize Environment",
+      "filename": "https://github.com/OraGitPush1/database/gds/initialize-environment/initialize-environment.md"
+    },
+    {
+      "title": "Lab 4: GDS Install",
+      "description": "GDS Install",
+      "filename": "https://github.com/OraGitPush1/database/gds/gds-install/gds-install.md"
+    },
+    {
+      "title": "Lab 5: Database updates to enable GDS",
+      "description": "Database updates to enable GDS",
+      "filename": "https://github.com/OraGitPush1/database/gds/database-updates-to-enable-GDS/gds-dbs-configuration.md"
+    },
+    {
+      "title": "Lab 6: GDS Configuration",
+      "description": "GDS Configuration",
+      "filename": "https://github.com/OraGitPush1/database/gds/gds-configuration/gds-service-configuration.md"
+    },
+    {
+      "title": "Lab 7: GDS Global Services test with DB Switchover and Failover",
+      "description": "GDS Global Services test with DB Switchover and Failover",
+      "filename": "https://github.com/OraGitPush1/database/gds/gds-switchover-failover/gds-switchover-failover.md"
+    },
+    {
+      "title": "Lab 8: Clean up Stack and Instances",
+      "description": "Clean up ORM Stack and instances",
+      "filename": "https://github.com/OraGitPush1/database/gds/cleanup/cleanup.md"
+    },
+    {
+      "title": "Troubleshooting: Guide for GDS Test Cases",
+      "description": "Troubleshooting Guide for GDS Test Cases",
+      "filename": "https://github.com/OraGitPush1/database/gds/troubleshootings/troubleshootings.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}
