@@ -20,16 +20,16 @@ This lab assumes you have:
 ## Task 1: Get started with your workshop.
 1. From the top left corner within the liveLabs browser session, click on "Activities". It will show widgets list in vertical order.
 
-   ![activities_raft_livelabs](images/activities_link_top_left_corner.png " ")
+    ![activities_raft_livelabs](images/activities_link_top_left_corner.png " ")
 
 2. From the widgets list, click on the first widget which shows the hoverover text on the right as  "Get Started with your Workshop"
 
-   ![get_started_workshop](images/get_started_workshop.png " ")
+    ![get_started_workshop](images/get_started_workshop.png " ")
 
  3. Instead of above 2nd step, an alternate option to Get started with your workshop or re-initialize environment at any time:
    Click on Activities (shown on top left corner) >> Terminal icon (shown on the bottom of the screen which is next to Chrome icon) to Launch the Terminal.
 
-   ![activities_terminial_widget](images/activities_terminial_widget.png " ")
+    ![activities_terminial_widget](images/activities_terminial_widget.png " ")
 
     Open terminal by click on Terminal icon: 
 
