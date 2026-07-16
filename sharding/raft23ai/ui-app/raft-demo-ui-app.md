@@ -2,25 +2,28 @@
 
 ## Introduction
 Raft Demo UI application is to showcase the Raft replication features.
-On right side of browser window, by default a single page application with titled "Raft Replication LiveLabs Demo: All Customers List" is shown.
+On right side of browser window, by default a single page application with titled "Raft Replication Dashboard" is shown.
 It can be opened anytime on the Chrome browser tab by typing http://localhost:8080
 
 Raft Replication Demo UI Application is to verify Raf Replication Topology in Oracle Globally Distributed AI Database with sample CRUD application for Customers Data.
 
-The Home page of the Raft Replication Demo UI Application to view sample customers data populated via running the initial workload:
+The Raft Replication Dashboard shows one of the sample customer ID's Shard Database and Replication Unit (RU), Selected RU's Placement, Database Operations and All Replication Units on each of the three shards with Leader and Follower details:
+
+![<raft_replication_dashboard>](./images/raft_replication_dashboard.png " ")
+
+All Customers List query is retrieved from the Catalog Database using the proxy-routing query via GDS$CATALOG service. The All Customers List shows Customer's data with pagination along with "Add customer", "More Details", "Update" customer, "Delete" customer links and "Count" of all the customers.
 
 ![<all_customer_after_inital_workload>](./images/all_customer_after_inital_workload.png " ")
 
-
-All Customers List query is retrieved from the Catalog Database using the proxy-routing query via GDS$CATALOG service. The Home Page shows 25 Customer's data with pagination along with "Add customer", "More Details", "Update" customer, "Delete" customer links and "Count" of all the customers. In the bottom section of the application, multiple page numbers are shown starting with page number "1". You can click any of the page number to view the max 25 customers listed on a specific page number.
-
 _Estimated Time_: 30 minutes
 
+<!--
 <if type="nonsandbox">
 Watch the video for a quick walk through of the Demo Application for Raft Replication.
 
 [Demo App for Raft Replication](videohub:1_m90w4f3p)
 </if>
+-->
 
 ### Objectives
 
