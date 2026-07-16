@@ -81,10 +81,9 @@ This lab assumes you have:
 
    The leadership has automatically moved to another shard, indicating re-routing of the request and switchover of RU to another shard is completed.
 
-8. Scroll down to see "GDD Workload Report" which has visual chart for TPS during the workload and additional details
+8. Scroll down to see "GDD Workload Report" which has visual chart for TPS during the workload and additional details.
 
-    ![<workload_completed_after_stopping_a_shard_report>](./images/workload_completed_after_stopping_a_shard_report.png " ")
-
+    ![<workload_completed_shard_report>](./images/workload_completed_shard_report.png " ")
 
     To confirm that there is no impact to the application even when one of the shards is down, you can continue to next task.
 
