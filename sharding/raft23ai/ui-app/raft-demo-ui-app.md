@@ -59,7 +59,7 @@ This lab assumes you have:
 
     If you just click on the "More Details" link, it'll open in the same tab. Clicking "Back to Customers List" from "Raft Replication Dashboard" page brings back to the main page.
 
-4. "Raft Replication Dashboard"'s first section shows "Shard Database and Replication Unit (RU#)" of a customer record with matching customerId (which is the sharding key). here, "Shard Database Name" can be either Shard1 ("orcl1cdb\_orcl1pdb") or Shard2 ("orcl2cdb\_orcl2pdb") or Shard3 ("orcl3cdb\_orcl3pdb").
+4. "Raft Replication Dashboard"'s first section shows "Shard Database and Replication Unit (RU#)" of a customer record with matching customerId (which is the sharding key). here, "Shard" can be either Shard1 or Shard2 or Shard3.
 
      ![<selected_customer_ru_and_leader_shard>](./images/selected_customer_ru_and_leader_shard.png " ")
 
