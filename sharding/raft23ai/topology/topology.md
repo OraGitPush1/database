@@ -217,17 +217,23 @@ Please use the below steps to run the workload using the "app_schema" account wi
 
     ![<appclient_container_loc>](./images/t4-3-appclient-container.png " ")
 
-3. Run the workload using the below command and to exit press Ctrl + C
+3. Run the workload using the below command which by default runs for 60 secs.
 
     ```
     <copy>
-    sh run.sh demo
+    sh run.sh
     </copy>
     ```
     
-    ![<t4-4-run-workload_and_ctrl_c>](./images/t4-4-run-workload_and_ctrl_c.png " ")
+    ![<t4-4-run-workload-for-60-secs>](./images/t4-4-run-workload-for-60-secs.png " ")
 
-4. Now check the RU details from terminal's 2nd tab which is switched to **gsm1**. Notice that for each RU#s, the values is "Log Index" columns are increased due to read and write operations are performed while running the workload.
+4. While workload is running, from Raft Replication dashboard check the "Count:" value increasing.
+
+    ![<t4-4-run-workload-for-60-secs-continue>](./images/t4-4-run-workload-for-60-secs-continue.png " ")
+
+
+
+5. Now check the RU details from terminal's 2nd tab which is switched to **gsm1**. Notice that for each RU#s, the values is "Log Index" columns are increased due to read and write operations are performed while running the workload.
 
     ```
     <copy>
@@ -242,7 +248,7 @@ Please use the below steps to run the workload using the "app_schema" account wi
     ![<t4-6-ui-after-workload-increase-count>](./images/t4-6-ui-after-workload-increase-count.png " ")
 
 
-6. You can enter CTRL-C to stop the workload if not already and check the Raft UI Demo main page to confirm the count is increased. You can also restart this workload as in step 3 and keep running during the next task "Perform Failover Test".
+6. You can enter CTRL-C to stop the workload if want to end the workload prior to 60 secs. You can also restart this workload as in step 3 and keep running during the next task "Perform Failover Test".
 
 
 ## Task 5: Perform Failover Test
@@ -355,4 +361,4 @@ You may now proceed to the next lab.
 ## Acknowledgements
 * **Authors** - Deeksha Sehgal, Ajay Joshi, Oracle Globally Distributed Database, Product Management
 * **Contributors** - Pankaj Chandiramani, Shefali Bhargava, Param Saini, Jyoti Verma
-* **Last Updated By/Date** - Ajay Joshi, Oracle Globally Distributed Database, Product Management, March 2026
+* **Last Updated By/Date** - Ajay Joshi, Oracle Globally Distributed Database, Product Management, July 2026

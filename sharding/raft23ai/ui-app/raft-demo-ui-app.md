@@ -11,9 +11,6 @@ The Raft Replication Dashboard shows one of the sample customer ID's Shard Datab
 
 ![<raft_replication_dashboard>](./images/raft_replication_dashboard.png " ")
 
-All Customers List query is retrieved from the Catalog Database using the proxy-routing query via GDS$CATALOG service. The All Customers List shows Customer's data with pagination along with "Add customer", "More Details", "Update" customer, "Delete" customer links and "Count" of all the customers.
-
-![<all_customer_after_inital_workload>](./images/all_customer_after_inital_workload.png " ")
 
 _Estimated Time_: 30 minutes
 
@@ -31,7 +28,9 @@ In this lab, you will:
 
 - Explore Raft Replication Demo UI Application for getting More Details for a customer record including its Replication Unit and leader shard.
 - Shutdown a shard for Switchover of a Replication Unit(RU#) to another shard as soon as its leader shard is shutdown and observer application is kept of running.
+- Run the Workload.
 - Start the previously shut downed shard.
+- Rebalance RUs to distribute leadership to all shards.
 - CRUD (Create, Update, Delete) operations with the UI Application to get a feel of zero data loss and never down scenarios while using Raft replication.
 
 ### Prerequisites
@@ -46,31 +45,46 @@ This lab assumes you have:
     - Lab: Initialize Environment
 
 
-## Task 1: Navigate to "More Details" page and shutdown a shard to perform switchover of its RUs to another shard(s)
+## Task 1: Navigate to "Raft Replication Dashboard" and shutdown a shard to perform switchover of its RUs to another shard(s)
 
-1. From "All Customers List" page, right click on the "More Details" link and click "Open link in new tab", it will open a page titled with "Raft Replication LiveLabs Demo: More Details".
+1. By default, application shows "Raft Replication Dashboard" which is same as the result of clicking "More Details" button from All Customers List. if you are already on the "Raft Replication Dashboard", skip step 2 and step 3.
+
+2. All Customers List query is retrieved from the Catalog Database using the proxy-routing query via GDS$CATALOG service. The All Customers List shows Customer's data with pagination along with "Add customer", "More Details", "Update" customer, "Delete" customer links and "Count" of all the customers.
+
+    ![<all_customer_after_inital_workload>](./images/all_customer_after_inital_workload.png " ")
+
+3. From "All Customers List" page, right click on the "More Details" link and click "Open link in new tab", it will open a page titled with "Raft Replication LiveLabs Demo: More Details".
 
     ![<all_customers_more_details_link>](./images/all_customers_more_details_link.png " ")
 
-    If you just click on the "More Details" link, it'll open in the same tab. Clicking "Back to Customers List" from "More Details" page brings back to the main page.
+    If you just click on the "More Details" link, it'll open in the same tab. Clicking "Back to Customers List" from "Raft Replication Dashboard" page brings back to the main page.
 
-2. "More Details" tab shows the "Shard Database Name" and Replication Unit (RU#) of the customer record with matching customerId (which is the sharding key). here, "Shard Database Name" can be either "orcl1cdborcl1pdb" (Shard1) or "orcl2cdborcl2pdb" (Shard2) or "orcl3cdb_orcl3pdb" (Shard3).
+4. "Raft Replication Dashboard"'s first section shows "Shard Database and Replication Unit (RU#)" of a customer record with matching customerId (which is the sharding key). here, "Shard Database Name" can be either Shard1 ("orcl1cdb\_orcl1pdb") or Shard2 ("orcl2cdb\_orcl2pdb") or Shard3 ("orcl3cdb\_orcl3pdb").
 
-    ![<more_details_prior_shutdown_shard1>](./images/more_details_prior_shutdown_shard1.png " ")
+     ![<selected_customer_ru_and_leader_shard>](./images/selected_customer_ru_and_leader_shard.png " ")
 
-3. You can Shutdown a Shard based on the "Shard Database Name" value displayed.
 
-    When "Shard Database Name" shows "orcl1cdb_orcl1pdb", Shard1 is the leader for Replication Unit (RU#1). click "Shutdown Shard1" link to switchover the leadership as below:
+5. From next section "Database Operations" shows Total number of shards and Up/Down counts of the shards. You can Shutdown a Shard based on the "Shard Database Name" value displayed in "Select RU Placement" section with Role as "Leader". "Select RU Placement" shows results from gsm(Global Service Manager)'s "gdsctl status ru -sort" result. In this example since Shard2 is with "Leader" Role, click "Shutdown" from the  shard2's details.
 
-    ![<shutdown_shard1>](./images/shutdown_shard1.png " ")
+    ![<stop_the_shard_for_the_leader_ru>](./images/stop_the_shard_for_the_leader_ru.png " ")
 
-    Note: Click only one of the matching shard's links for example, either "Shutdown Shard1" or "Shutdown Shard2" or "Shutdown Shard3". Please **do not shutdown more than one Shard from the UI Application** otherwise those shards may need to bring back up from the terminal window for which steps will be provided later in the next Lab "Explore Raft Replication Topology".
+    Note: Only one of the shard shutdown is allowed from UI demo.
 
-4. Wait until the shutdown a shard completes (it can take around a minute or a few seconds sometime). You will notice that the hovering icon of the "more Details" tab stops and the shard leadership automatically changes. "Shard Database Name" will show new leader shard. For Example, when "orcl2cdb_orcl2pdb" (Shard2) becomes the new leader for Replication Unit (RU#1), it will show like in the screenshot as below.
+6. While Shutdown a shard is happening, you can observe that this application and customer details still showning details. Now you can click "Run Workload". This workload is run with 4 Threads for 60 seconds and show TPS, counts prior the workload, running count etc details.
 
-    ![<more_details_after_shutdown_shard1>](./images/more_details_after_shutdown_shard1.png " ")
+    ![<run_the_workload_while_stop_shard_in_progress>](./images/run_the_workload_while_stop_shard_in_progress.png " ")
+      
 
-    You can observe that the leadership has automatically moved to another shard, indicating re-routing of the request and switchover of RU to another shard is completed.
+7. Observe shutdown shard ( here, Shard2) gets complete, leader role change for RU gets complete and workload also gets completed.
+
+    ![<workload_completed_and_shard_stopped>](./images/workload_completed_and_shard_stopped.png " ")
+
+   The leadership has automatically moved to another shard, indicating re-routing of the request and switchover of RU to another shard is completed.
+
+8. Scroll down to see "GDD Workload Report" which has visual chart for TPS during the workload and additional details
+
+    ![<workload_completed_after_stopping_a_shard_report>](./images/workload_completed_after_stopping_a_shard_report.png " ")
+
 
     To confirm that there is no impact to the application even when one of the shards is down, you can continue to next task.
 
@@ -78,7 +92,7 @@ This lab assumes you have:
 
 1. Add Customer: A customer can be added either using link "Add Customer" on top section of the home page "Raft Replication LiveLabs Demo: All Customers List" or by an API call in a browser "http://localhost:8080/addcustomer"
 
-    ![<add_customer_aaa>](./images/add_customer_aaa.png " ")
+    ![<add_customer>](./images/add_customer.png " ")
 
 2. After adding customer, it brings back to the All-Customers List page. Total Customers count increased by 1.
 
@@ -111,9 +125,26 @@ This lab assumes you have:
 1. As you verified that application kept running while one of the shard was down, now bring that shard back.
    For example, since shard3 was shutdown in a previous Task 1's step 3 earlier, now to bring it back, click the "Start Shard1" link.
 
-    ![<restart_shard1>](./images/restart_shard1.png " ")
+    ![<restart_the_shard>](./images/restart_the_shard.png " ")
 
-    Now all three shards are up and application is running.
+2. Run the workload again while a shard is starting
+
+     ![<workload_started_after_restart_shard>](./images/workload_started_after_restart_shard.png " ")
+
+3. Validate Raft Replication Dashboard after a shard is re-started for all shards are up, counts, RU placements:
+    
+    ![<validate_dashboard_after_shard_started>](./images/validate_dashboard_after_shard_started.png " ")
+
+
+4. Sometime you need to rebalalnce RUs manually after a shard is re-started. in this case click "Rebalalnce RUs" button.
+
+    ![<rebalance_the_rus_started_after_shard_startup>](./images/rebalance_the_rus_started_after_shard_startup.png " ")
+
+5. Validate after "Rebalance RUs" task is completed:
+
+    ![<rebalanced_the_rus_again_after_shard_startup>](./images/rebalanced_the_rus_again_after_shard_startup.png " ")
+
+    Now all three shards are up with "Rebalance RUs" and application is running.
 
     You can keep the Application UI page running to verify the results from next Labs "Explore Raft Replication Topology" or any other activities affecting application data. If you have closed UI browser session, you can open it anytime in a browser session by http://localhost:8080 or from a terminal window entering 
 
@@ -127,6 +158,6 @@ This lab assumes you have:
 You may now proceed to the next lab.
 
 ## Acknowledgements
-* **Authors** - Ajay Joshi, Oracle Globally Distributed Database, Product Management
+* **Authors** - Ajay Joshi, Lead Principal Data Software Engineer, Oracle Globally Distributed Database
 * **Contributors** - Pankaj Chandiramani, Shefali Bhargava, Deeksha Sehgal, Param Saini, Jyoti Verma
-* **Last Updated By/Date** - Ajay Joshi, Oracle Globally Distributed Database, Product Management, March 2026
+* **Last Updated By/Date** - Ajay Joshi, Lead Principal Data Software Engineer, Oracle Globally Distributed Database, July 2026
