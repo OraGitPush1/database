@@ -39,9 +39,9 @@ This lab assumes you have:
 
 ## Task 1: Navigate to "Raft Replication Dashboard" and shutdown a shard to perform switchover of its RUs to another shard(s)
 
-1. By default, application shows "Raft Replication Dashboard" which is same as the result of clicking "More Details" button from All Customers List. if you are already on the "Raft Replication Dashboard", skip step 2 and step 3.
+1. By default, application shows "Raft Replication Dashboard" which is same as the result of clicking "More Details" button from All-Customers List. if you are already on the "Raft Replication Dashboard", skip step 2 and step 3.
 
-2. All Customers List query is retrieved from the Catalog Database using the proxy-routing query via GDS$CATALOG service. The All Customers List shows Customer's data with pagination along with "Add customer", "More Details", "Update" customer, "Delete" customer links and "Count" of all the customers.
+2. All Customers List query is retrieved from the Catalog Database using the proxy-routing query via GDS$CATALOG service. The All-Customers List shows Customer's data with pagination along with "Add customer", "More Details", "Update" customer, "Delete" customer links and "Count" of all the customers.
 
     ![<all_customer_after_inital_workload>](./images/all_customer_after_inital_workload.png " ")
 
@@ -51,7 +51,7 @@ This lab assumes you have:
 
     If you just click on the "More Details" link, it'll open in the same tab. Clicking "Back to Customers List" from "Raft Replication Dashboard" page brings back to the main page.
 
-4. "Raft Replication Dashboard"'s first section shows "Shard Database and Replication Unit (RU#)" of a customer record with matching customerId (which is the sharding key). here, "Shard" can be either Shard1 or Shard2 or Shard3.
+4. Raft Replication Dashboard's first section shows "Shard Database and Replication Unit (RU#)" of a customer record with matching customerId (which is the sharding key). here, "Shard" can be either Shard1 or Shard2 or Shard3.
 
      ![<selected_customer_ru_and_leader_shard>](./images/selected_customer_ru_and_leader_shard.png " ")
 
@@ -62,12 +62,12 @@ This lab assumes you have:
 
     Note: Only one of the shard shutdown is allowed from UI demo.
 
-6. While Shutdown a shard is happening, you can observe that this application and customer details still showning details. Now you can click "Run Workload". This workload is run with 4 Threads for 60 seconds and show TPS, counts prior the workload, running count etc details.
+6. While Shutdown a shard is happening, you can observe that this application and customer details still showing details. Now you can click "Run Workload". This workload is run with 4 Threads for 60 seconds and show TPS, counts prior the workload, running count etc details.
 
     ![<run_the_workload_while_stop_shard_in_progress>](./images/run_the_workload_while_stop_shard_in_progress.png " ")
       
 
-7. Observe shutdown shard ( here, Shard2) gets complete, leader role change for RU gets complete and workload also gets completed.
+7. Observe shutdown shard (here, Shard2) gets complete, leader role change for RU gets complete and workload also gets completed.
 
     ![<workload_completed_and_shard_stopped>](./images/workload_completed_and_shard_stopped.png " ")
 
@@ -113,7 +113,7 @@ This lab assumes you have:
 
 ## Task 3: Startup the previously shutdown shard
 
-1. As you verified that application kept running while one of the shard was down, now bring that shard back.
+1. As you verified that application kept running while one of the shards was down, now bring that shard back.
    For example, since shard3 was shutdown in a previous Task 1's step 3 earlier, now to bring it back, click the "Start Shard1" link.
 
     ![<restart_the_shard>](./images/restart_the_shard.png " ")
@@ -127,7 +127,7 @@ This lab assumes you have:
     ![<validate_dashboard_after_shard_started>](./images/validate_dashboard_after_shard_started.png " ")
 
 
-4. Sometime you need to rebalalnce RUs manually after a shard is re-started. in this case click "Rebalalnce RUs" button.
+4. Sometimes you need to rebalance RUs manually after a shard is re-started. in this case click "Rebalance RUs" button.
 
     ![<rebalance_the_rus_started_after_shard_startup>](./images/rebalance_the_rus_started_after_shard_startup.png " ")
 
@@ -149,6 +149,6 @@ This lab assumes you have:
 You may now proceed to the next lab.
 
 ## Acknowledgements
-* **Authors** - Ajay Joshi, Lead Principal Data Software Engineer, Oracle Globally Distributed Database
+* **Authors** - Ajay Joshi, Lead Principal Data Systems Engineer, Oracle Globally Distributed Database
 * **Contributors** - Pankaj Chandiramani, Shefali Bhargava, Deeksha Sehgal, Param Saini, Jyoti Verma
-* **Last Updated By/Date** - Ajay Joshi, Lead Principal Data Software Engineer, Oracle Globally Distributed Database, July 2026
+* **Last Updated By/Date** - Ajay Joshi, Lead Principal Data Systems Engineer, Oracle Globally Distributed Database, July 2026

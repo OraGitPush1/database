@@ -11,7 +11,7 @@ Raft replication provides a consensus, high-performance, low-overhead availabili
 
 This workshop is configured with a custom image having all the required podman containers for Oracle Globally Distributed AI Database using RDBMS and GSM Images.
 
-In this workshop, we attempt to use minimal resources to show the demonstration, and in the process, we chose a single compute instance to install all of the Oracle Globally Distributed Database components and appclient.
+In this workshop, we attempt to use minimal resources to show the demonstration, and in the process, we chose a single compute instance to install all the Oracle Globally Distributed Database components and appclient.
 
 
 *Estimated Time*:  30 minutes
@@ -233,7 +233,7 @@ Please use the below steps to run the workload using the "app_schema" account wi
 
 
 
-5. Now check the RU details from terminal's 2nd tab which is switched to **gsm1**. Notice that for each RU#s, the values is "Log Index" columns are increased due to read and write operations are performed while running the workload.
+5. Now check the RU details from terminal's 2nd tab which is switched to **gsm1**. Notice that for each RU, the values in the Log Index column increased because read and write operations were performed while running the workload.
 
     ```
     <copy>
@@ -361,4 +361,4 @@ You may now proceed to the next lab.
 ## Acknowledgements
 * **Authors** - Deeksha Sehgal, Ajay Joshi, Oracle Globally Distributed Database, Product Management
 * **Contributors** - Pankaj Chandiramani, Shefali Bhargava, Param Saini, Jyoti Verma
-* **Last Updated By/Date** - Ajay Joshi, Oracle Globally Distributed Database, Product Management, July 2026
+* **Last Updated By/Date** - Ajay Joshi, Lead Principal Data Systems Engineer, Oracle Globally Distributed Database, July 2026
