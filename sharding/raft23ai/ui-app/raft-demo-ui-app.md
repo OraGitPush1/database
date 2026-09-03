@@ -151,4 +151,4 @@ You may now proceed to the next lab.
 ## Acknowledgements
 * **Authors** - Ajay Joshi, Lead Principal Data Systems Engineer, Oracle Globally Distributed Database
 * **Contributors** - Pankaj Chandiramani, Shefali Bhargava, Deeksha Sehgal, Param Saini, Jyoti Verma
-* **Last Updated By/Date** - Ajay Joshi, Lead Principal Data Systems Engineer, Oracle Globally Distributed Database, July 2026
+* **Last Updated By/Date** - Ajay Joshi, Lead Principal Data Systems Engineer, Oracle Globally Distributed Database, September 2026

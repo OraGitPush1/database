@@ -345,7 +345,7 @@ Failover test by stopping shard1 to create shard1 down situation.
     gdsctl switchover ru -rebalance
     </copy>
     ```
-    ![<change_the_ru_leader>](./images/t3-2-auto-rebalance.png " ")
+    ![<change_the_ru_leader>](./images/t5-6-auto-rebalance.png " ")
 
 7. Verify the RU# and its leaders after rebalancing the RUs on the shards.
 
@@ -354,11 +354,11 @@ Failover test by stopping shard1 to create shard1 down situation.
     gdsctl ru -sort
     </copy>
     ```
-    ![<ru_sort_after_rebalance>](./images/t5-6-ru-sort-after-rebalance.png " ")
+    ![<ru_sort_after_rebalance>](./images/t5-7-ru-sort-after-rebalance.png " ")
 
 You may now proceed to the next lab.
 
 ## Acknowledgements
 * **Authors** - Deeksha Sehgal, Ajay Joshi, Oracle Globally Distributed Database, Product Management
 * **Contributors** - Pankaj Chandiramani, Shefali Bhargava, Param Saini, Jyoti Verma
-* **Last Updated By/Date** - Ajay Joshi, Lead Principal Data Systems Engineer, Oracle Globally Distributed Database, July 2026
+* **Last Updated By/Date** - Ajay Joshi, Lead Principal Data Systems Engineer, Oracle Globally Distributed Database, September 2026
