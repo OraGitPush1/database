@@ -79,6 +79,7 @@ This lab assumes you have:
 
     To confirm that there is no impact to the application even when one of the shards is down, you can continue to next task.
 
+
 ## Task 2: Access the Demo UI application to view pre-loaded Customers List and perform CRUD operations
 
 1. Add Customer: A customer can be added either using link "Add Customer" on top section of the home page "Raft Replication LiveLabs Demo: All Customers List" or by an API call in a browser "http://localhost:8080/addcustomer"
@@ -110,6 +111,7 @@ This lab assumes you have:
 8. "Home" Page link at the bottom the page brings to the first page and useful when you are at any higher page# and want to return to the first page of Raft UI application.
 
     Similar CRUD operations and database shutdown/startup can be performed using SQL*Plus command from within a podman container of a specific database.
+
 
 ## Task 3: Startup the previously shutdown shard
 
